@@ -1,74 +1,45 @@
 # LeKiwi_ROS
 
-A ROS (Robot Operating System) project for arm controller and arm description packages.
+A ROS-based control system for the LeKiwi mobile manipulator robot.
 
-## Technology Stack
+## Overview
 
-- **Python** (87.3%) - Core logic and scripting
-- **CMake** (12.7%) - Build system configuration
+LeKiwi is a mobile manipulator platform combining a wheeled mobile base with a multi-DOF robotic arm for autonomous manipulation tasks.
 
-## Prerequisites
+## Requirements
 
-- ROS (Robot Operating System) installed
+- ROS (Robot Operating System)
 - Python 3.6+
 - CMake 3.0+
 - Colcon build tool
 
-## Getting Started
+## Installation
 
-### Installation
+Clone the repository into your ROS workspace:
 
-1. Clone the repository into your ROS workspace:
-   ```bash
-   cd ~/lekiwi_ws/src
-   git clone https://github.com/mohmedatwa/LeKiwi_ROS.git
-   cd ..
-   ```
-
-2. Build the project with colcon:
-   ```bash
-   colcon build
-   ```
-
-3. Source the setup file:
-   ```bash
-   source install/setup.bash
-   ```
+```bash
+cd ~/lekiwi_ws/src
+git clone https://github.com/mohmedatwa/LeKiwi_ROS.git
+cd ~/lekiwi_ws
+colcon build
+source install/setup.bash
+```
 
 ## Project Structure
 
 ```
 LeKiwi_ROS/
-├── lekiwi_controller/      # ARM controller package
-│   ��── [Controller implementation and configurations]
-├── lekiwi_description/     # ARM description package
-│   └── [Robot URDF and description files]
-├── LICENSE                 # Apache 2.0 License
-└── README.md              # This file
+├── lekiwi_controller/     # Arm controller package
+├── lekiwi_description/    # Robot description (URDF, meshes)
+├── LICENSE
+└── README.md
 ```
-
-## Packages
-
-### lekiwi_controller
-Handles arm controller functionality and control logic.
-
-### lekiwi_description
-Contains the robot description files (URDF) and related configuration for the arm.
-
-## Usage
-
-[Add specific usage instructions here]
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Apache License 2.0. See [LICENSE](LICENSE) for details.
 
-## Resources
+## References
 
 - [ROS Documentation](http://wiki.ros.org/)
-- [Colcon Documentation](https://colcon.readthedocs.io/)
-- [Python ROS Tutorials](http://wiki.ros.org/ROS/Tutorials)
+- [Colcon Build Tool](https://colcon.readthedocs.io/)
