@@ -1,6 +1,6 @@
 # LeKiwi_ROS
 
-A ROS (Robot Operating System) project combining Python and CMake for robot control and automation.
+A ROS (Robot Operating System) project for arm controller and arm description packages.
 
 ## Technology Stack
 
@@ -12,43 +12,48 @@ A ROS (Robot Operating System) project combining Python and CMake for robot cont
 - ROS (Robot Operating System) installed
 - Python 3.6+
 - CMake 3.0+
-- C++ compiler (for building C++ components if any)
+- Colcon build tool
 
 ## Getting Started
 
 ### Installation
 
-1. Clone the repository:
+1. Clone the repository into your ROS workspace:
    ```bash
+   cd ~/lekiwi_ws/src
    git clone https://github.com/mohmedatwa/LeKiwi_ROS.git
-   cd LeKiwi_ROS
+   cd ..
    ```
 
-2. Build the project:
+2. Build the project with colcon:
    ```bash
-   mkdir build
-   cd build
-   cmake ..
-   make
+   colcon build
    ```
 
-3. Source the ROS setup:
+3. Source the setup file:
    ```bash
-   source /opt/ros/<distro>/setup.bash
+   source install/setup.bash
    ```
 
 ## Project Structure
 
 ```
 LeKiwi_ROS/
-├── CMakeLists.txt
-├── package.xml
-├── src/
-│   └── [Python and C++ source files]
-├── launch/
-│   └── [ROS launch files]
-└── README.md
+├── lekiwi_controller/      # ARM controller package
+│   ��── [Controller implementation and configurations]
+├── lekiwi_description/     # ARM description package
+│   └── [Robot URDF and description files]
+├── LICENSE                 # Apache 2.0 License
+└── README.md              # This file
 ```
+
+## Packages
+
+### lekiwi_controller
+Handles arm controller functionality and control logic.
+
+### lekiwi_description
+Contains the robot description files (URDF) and related configuration for the arm.
 
 ## Usage
 
@@ -65,4 +70,5 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 ## Resources
 
 - [ROS Documentation](http://wiki.ros.org/)
+- [Colcon Documentation](https://colcon.readthedocs.io/)
 - [Python ROS Tutorials](http://wiki.ros.org/ROS/Tutorials)
