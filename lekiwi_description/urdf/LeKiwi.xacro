@@ -100,7 +100,7 @@
         <collision name="4-Omni-Directional-Wheel_Single_Body-v1-2_collision">
             <origin xyz="7.450578487500081e-12 0.015874999999999986 6.661338147750939e-18" rpy="1.5707963267948966 0.26179938779914924 -1.0046485565123013e-33" />
             <geometry>
-                <sphere radius="0.05" />
+                <cylinder radius="0.05" length="0.03"/>
             </geometry>
         </collision>
     </link>
@@ -205,7 +205,7 @@
         <collision name="4-Omni-Directional-Wheel_Single_Body-v1-1_collision">
             <origin xyz="0.013748155931950041 -0.007937495502761073 -2.2204460492503132e-17" rpy="-0.5235987755982988 -1.5707963267948963 0" />
             <geometry>
-                <sphere radius="0.05" />
+                <cylinder radius="0.05" length="0.03"/>
             </geometry>
         </collision>
     </link>
@@ -289,7 +289,7 @@
         <collision name="4-Omni-Directional-Wheel_Single_Body-v1_collision">
             <origin xyz="-0.013748155616372878 -0.007937504497239081 -5.773159728050814e-17" rpy="1.5707963267948974 -1.3089969389957468 2.094395102393195" />
             <geometry>
-                <sphere radius="0.05" />
+                <cylinder radius="0.05" length="0.03"/>
             </geometry>
         </collision>
     </link>
@@ -967,7 +967,7 @@
     </link>
     
     <joint name="base_joint" type="fixed">
-        <origin xyz="0 0 0.025" rpy="0 0 0" />
+        <origin xyz="0 0 0.025" rpy="0 0 -${pi/2}" />
         <parent link="base_footprint" />
         <child link="base_plate_layer1-v5" />
     </joint>
@@ -1201,4 +1201,3 @@
         <child link="Camera-Model-v3-1" />
     </joint>
 </robot>
-
